@@ -9,7 +9,8 @@ fn main() {
     println!(
         "Timing: AOT compiled = {} ms, normal = {} ms (1..=100)",
         t_aot.as_millis(),
-        t_normal.as_millis()
+        //1,
+        t_normal.as_millis(),
     );
 }
 

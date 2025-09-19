@@ -286,6 +286,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "34ac096ce696dc2fcabef30516bb13c0a68a11d30131d3df6f04711467681b04"
 
 [[package]]
+name = "aot_wbnb_ffi"
+version = "0.1.0"
+dependencies = [
+ "revm-ffi-bridge",
+ "tiny-keccak",
+]
+
+[[package]]
 name = "arbitrary"
 version = "1.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2834,17 +2842,23 @@ dependencies = [
 ]
 
 [[package]]
+name = "revm-ffi-bridge"
+version = "0.1.0"
+
+[[package]]
 name = "revm-handler"
 version = "10.0.0"
 dependencies = [
  "anyhow",
  "auto_impl",
  "derive-where",
+ "hex",
  "libloading",
  "revm-bytecode",
  "revm-context",
  "revm-context-interface",
  "revm-database-interface",
+ "revm-ffi-bridge",
  "revm-interpreter 25.0.2",
  "revm-precompile",
  "revm-primitives 20.2.1",
@@ -4010,6 +4024,15 @@ dependencies = [
  "cfg-if",
  "libc",
  "windows-sys 0.59.0",
+]
+
+[[package]]
+name = "wbnb"
+version = "0.1.0"
+dependencies = [
+ "libloading",
+ "revm",
+ "revm-ffi-bridge",
 ]
 
 [[package]]

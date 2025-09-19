@@ -1,0 +1,20 @@
+[package]
+name = "wbnb"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+categories.workspace = true
+keywords.workspace = true
+homepage.workspace = true
+repository.workspace = true
+exclude.workspace = true
+
+[dependencies]
+revm = { path = "/Users/constbh/rustRepo/revm/crates/revm", features = ["std"] }
+revm-ffi-bridge = { path = "/Users/constbh/rustRepo/revm/crates/ffi-bridge" }
+libloading = "0.8"
+
+[lints]
+workspace = true
