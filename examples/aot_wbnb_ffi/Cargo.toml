@@ -1,0 +1,13 @@
+[package]
+name = "aot_wbnb_ffi"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "aot_wbnb_ffi"
+crate-type = ["cdylib"]
+
+[dependencies]
+revm-ffi-bridge = { path = "/Users/constbh/rustRepo/revm/crates/ffi-bridge" }
+tiny-keccak = { version = "2", features = ["keccak"] }
+

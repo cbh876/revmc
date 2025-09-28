@@ -1,5 +1,5 @@
 [package]
-name = "revmc-examples-runner"
+name = "aot_fib"
 publish = false
 
 version.workspace = true
@@ -12,7 +12,5 @@ keywords.workspace = true
 repository.workspace = true
 exclude.workspace = true
 
-[dependencies]
-revm = { path = "/Users/constbh/rustRepo/revm/crates/revm", features = ["std"] }
-revmc-builtins = { workspace = true, default-features = false }
-revmc-context = { workspace = true, default-features = false }
+[lib]
+crate-type = ["cdylib"]
